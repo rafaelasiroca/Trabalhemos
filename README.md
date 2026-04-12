@@ -6,56 +6,106 @@ Este projeto tem como principal objetivo divulgar serviços online, oferecendo v
 
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
+---
+
 ## 📚 Documentação do Projeto
 
 Para entender as regras de negócio, o escopo e a arquitetura técnica da aplicação, consulte os documentos abaixo:
 
-- [[📄 Product Requirements Document (PRD)](./docs/prd.md)](https://github.com/rafaelasiroca/Trabalhemos/commit/260515f243909ae7b9977ed7977764707ac8521b) - Visão geral e atores 
+- [[📄 Product Requirements Document (PRD)](./docs/prd.md)](https://github.com/rafaelasiroca/Trabalhemos/commit/260515f243909ae7b9977ed7977764707ac8521b) - Visão geral e atores
 - [🛠️ Especificação Técnica (Tech Spec)](./docs/spec.md) - Diagrama de banco de dados (DER), dicionário de dados e rotas da API (JSON Server).
+
+---
 
 ## 🎨 Design
 
 - [🎨 Design System](docs/design-system.md) - Identidade visual
-- [🖼️ Protótipo no Figma]([https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80](https://stitch.withgoogle.com/projects/1321039296422867299)) - Telas interativas da aplicação.
+- [🖼️ Protótipo no Figma](https://stitch.withgoogle.com/projects/1321039296422867299) - Telas interativas da aplicação.
+
+---
 
 ## 🌐 Site em Produção - GitHub Pages
 
 https://utfpr-gp.github.io/roubank-css/
 
+---
+
 ## 💻 Tecnologias e Dependências
 
-- **Framework CSS:** MaterializeCSS
-- **JavaScript:**
-  - **JQuery** - Para realizar animações e manipulação do DOM.
-  - **JSON Server** - Para simular uma API REST.
-RA1 - Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos
-   01 - Prototipa interfaces adaptáveis para no mínimo mobile e desktop, usando ferramentas de design (Figma, Quant UX, Sketch) ou IA (Stitch).
-   02 - Aplica um Design System consistente (cores, tipografia, padrões de componentes) em toda a aplicação.
-   03 - Implementa layout responsivo com CSS puro, usando Flexbox ou Gr   Layout.
-   04 - Implementa layout responsivo com Framework CSS (Bootstrap, Materialize, Tailwind + DaisyUI) usando Flexbox ou Gr  do framework.
-   05 - Utiliza componentes prontos de Framework CSS (card, button etc.) e componentes JavaScript do framework (modal, carousel).
-   06 - Cria layout flu  o usando un ades relativas (vw, vh, %, em, rem) em vez de px.
-   07 - Aplica tipografia responsiva (media queries mobile first) ou tipografia flu  a (clamp() + un ades relativas).
-   08 - Aplica técnicas de responsiv ade de imagens usando CSS (object-fit, containers com un ades relativas).
-   09 - Utiliza Sass (SCSS) aplicando variáveis, mixins e funções para modularizar o código.
-   10 - Otimiza imagens usando formatos modernos (WebP) e carregamento adaptativo (srcset, picture ou Cloudinary).
-RA2 - Realizar tratamento de formulários e aplicar val  ações customizadas no lado cliente
-   11 - Utiliza elementos de seleção em formulários (checkbox, radio, select) para coleta de dados.
-   12 - Implementa val ação HTML nativa (required, type, min/max, limites de caracteres) com mensagens de erro/sucesso no lado cliente.
-   13 - Aplica expressões regulares (REGEX) para val ações customizadas (e-mail, telefone, datas etc.).
-   14 - Implementa leitura e escrita no Web Storage (localStorage/sessionStorage) para persistir dados localmente.
-RA3 - Aplicar ferramentas para otimização do processo de desenvolvimento web
-   15 - Configura ambiente com Node.js e NPM para gerenciamento de pacotes e dependências.
-   16 - Organiza arquivos do projeto de forma modular, seguindo padrão de exemplo fornec o.
-   17 - Utiliza boas práticas de versionamento no Git/GitHub (branch main ou branches específicos, uso de .gitignore).
-   18 - Mantém um README.md padronizado conforme template da disciplina, com checklist preench o.
-   19 - Configura linters e formatadores (ESLint, Prettier) para padronização e qual ade do código.
-RA4 - Aplicar bibliotecas de funções e componentes em JavaScript para aprimorar a interativ ade de páginas web
-   20 - Utiliza jQuery para manipulação do DOM e interativ ade (eventos, animações, manipulação de elementos).
-   21 - Integra e configura um plugin jQuery relevante (ex.: jQuery Mask Plugin).
-RA5 - Efetuar requisições assíncronas para uma API fake e APIs públicas, permitindo obtenção e manipulação de dados dinamicamente
-   22 - Realiza requisições assíncronas para uma API fake (JSON Server) para persistir dados de um formulário.
-   23 - Realiza requisições assíncronas para uma API fake para exibir dados na página.
- ID 24 - Realiza requisiisições assíncronas para APIs públicas reais (ViaCEP, OpenWeather etc.), exibindo dados e tratando erros.
+### 🎨 Framework CSS Escolhido: Bootstrap
 
+O projeto utiliza o **Bootstrap** como Framework CSS principal para construção do layout e componentes visuais.
 
+✅ **Justificativa comercial/visual:**  
+O Bootstrap foi escolhido por ser um dos frameworks mais utilizados no mercado, oferecendo grande variedade de componentes prontos, design moderno e consistência visual. Além disso, sua documentação é extremamente completa, facilitando a manutenção do projeto e acelerando o desenvolvimento do sistema. Sua estrutura responsiva baseada em Grid permite adaptar a plataforma para dispositivos mobile e desktop, garantindo melhor experiência para usuários e clientes.
+
+---
+
+### 🌍 API Pública Escolhida: ViaCEP
+
+A API pública escolhida para integração no sistema foi a **ViaCEP**, utilizada para consulta de endereço a partir do CEP.
+
+🔗 API: https://viacep.com.br/
+
+✅ **Justificativa comercial/funcional:**  
+A ViaCEP foi escolhida por ser uma API gratuita, rápida e confiável, muito utilizada em sistemas reais no Brasil. Sua integração permite que o sistema preencha automaticamente dados como rua, bairro, cidade e estado, reduzindo erros no cadastro e melhorando a experiência do usuário. Isso torna o processo mais profissional e eficiente, especialmente para trabalhadores que precisam registrar informações corretas para oferecer seus serviços.
+
+---
+
+### ⚙️ Outras Tecnologias Utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Bootstrap**
+- **jQuery** - Para animações e manipulação do DOM.
+- **JSON Server** - Para simular uma API REST (API Fake).
+
+---
+
+## ✅ Checklist - Resultados de Aprendizagem (RA)
+
+### RA1 - Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos.
+
+- [x] ID 01 - Prototipa interfaces adaptáveis para mobile e desktop usando ferramentas de design.
+- [x] ID 02 - Aplica um Design System consistente.
+- [x] ID 03 - Implementa layout responsivo com CSS puro usando Flexbox ou Grid.
+- [x] ID 04 - Implementa layout responsivo com Framework CSS (Bootstrap).
+- [x] ID 05 - Utiliza componentes prontos do Bootstrap (cards, botões, modais etc.).
+- [x] ID 06 - Cria layout fluido usando unidades relativas.
+- [x] ID 07 - Aplica tipografia responsiva.
+- [x] ID 08 - Aplica responsividade de imagens com CSS.
+
+---
+
+### RA2 - Realizar tratamento de formulários e aplicar validações customizadas no lado cliente
+
+- [ ] ID 11 - Utiliza elementos de seleção em formulários.
+- [ ] ID 12 - Implementa validação HTML nativa.
+- [ ] ID 13 - Aplica REGEX para validações customizadas.
+- [ ] ID 14 - Implementa leitura e escrita no Web Storage.
+
+---
+
+### RA3 - Aplicar ferramentas para otimização do processo de desenvolvimento web
+
+- [ ] ID 15 - Configura ambiente com Node.js e NPM.
+- [ ] ID 16 - Organiza arquivos do projeto de forma modular.
+- [ ] ID 17 - Utiliza boas práticas de versionamento no Git/GitHub.
+- [x] ID 18 - Mantém um README.md padronizado conforme template da disciplina.
+- [ ] ID 19 - Configura linters e formatadores.
+
+---
+
+### RA4 - Aplicar bibliotecas de funções e componentes em JavaScript
+
+- [x] ID 20 - Utiliza jQuery para manipulação do DOM e interatividade.
+- [ ] ID 21 - Integra plugin jQuery relevante.
+
+---
+
+### RA5 - Efetuar requisições assíncronas para uma API fake e APIs públicas
+
+- [x] ID 22 - Realiza requisições assíncronas para API fake (JSON Server).
+- [x] ID 23 - Exibe dados na página a partir da API fake.
+- [x] ID 24 - Realiza requisições assíncronas para API pública real (ViaCEP), exibindo dados e tratando erros.
