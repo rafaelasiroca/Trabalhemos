@@ -26,7 +26,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 ## 🌐 Site em Produção - GitHub Pages
 
-https://utfpr-gp.github.io/roubank-css/
+[https://utfpr-gp.github.io/roubank-css/](https://github.com/rafaelasiroca/Trabalhemos.git)
 
 ---
 
