@@ -1,0 +1,167 @@
+/* Trabalhemos — design system + Stitch-inspired polish */
+
+:root {
+  --tm-primary: #2e7d32;
+  --tm-primary-hover: #1b5e20;
+  --tm-secondary: #1565c0;
+  --tm-secondary-hover: #0d47a1;
+  --tm-bg: #f5f5f5;
+  --tm-text: #212121;
+  --tm-success-msg: #4caf50;
+  --tm-radius-lg: 1rem;
+  --tm-radius-xl: 1.25rem;
+  --tm-shadow: 0 4px 24px rgba(33, 33, 33, 0.08);
+  --tm-shadow-hover: 0 8px 32px rgba(33, 33, 33, 0.12);
+}
+
+body {
+  font-family: "Open Sans", system-ui, sans-serif;
+  color: var(--tm-text);
+  background-color: var(--tm-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 600;
+}
+
+.btn-success {
+  --bs-btn-bg: var(--tm-primary);
+  --bs-btn-border-color: var(--tm-primary);
+  --bs-btn-hover-bg: var(--tm-primary-hover);
+  --bs-btn-hover-border-color: var(--tm-primary-hover);
+  --bs-btn-active-bg: var(--tm-primary-hover);
+  --bs-btn-active-border-color: var(--tm-primary-hover);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--tm-secondary);
+  --bs-btn-border-color: var(--tm-secondary);
+  --bs-btn-hover-bg: var(--tm-secondary-hover);
+  --bs-btn-hover-border-color: var(--tm-secondary-hover);
+}
+
+.text-success {
+  color: var(--tm-primary) !important;
+}
+
+.tm-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tm-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--tm-radius-xl);
+  background: linear-gradient(135deg, #e8f5e9 0%, #fff 45%, #e3f2fd 100%);
+  box-shadow: var(--tm-shadow);
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+
+.tm-hero::after {
+  content: "";
+  position: absolute;
+  right: -20%;
+  top: -30%;
+  width: 55%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(46, 125, 50, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tm-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.tm-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--tm-secondary);
+  background: rgba(21, 101, 192, 0.1);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+
+.tm-card {
+  border: none;
+  border-radius: var(--tm-radius-lg);
+  box-shadow: var(--tm-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--tm-shadow-hover);
+}
+
+.tm-card .card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.tm-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.tm-page-hero {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.tm-form-card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.tm-footer {
+  margin-top: auto;
+  padding: 2rem 0;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+  color: #616161;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.tm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #e8f5e9;
+  color: var(--tm-primary);
+}
+
+.tm-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #757575;
+}
