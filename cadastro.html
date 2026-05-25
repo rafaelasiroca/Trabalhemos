@@ -4,24 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro — Trabalhemos</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="bg-light">
-  <header class="bg-white tm-header shadow-sm sticky-top">
+
+<body>
+  <header class="tm-header shadow-sm sticky-top">
     <nav class="navbar navbar-expand-lg container py-3">
-      <a class="navbar-brand text-success" href="index.html">Trabalhemos</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
+      <a class="navbar-brand text-success fw-bold" href="index.html">Trabalhemos</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+        aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="menuNavbar">
         <ul class="navbar-nav ms-auto gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
           <li class="nav-item"><a class="nav-link" href="vagas.html">Vagas</a></li>
-          <li class="nav-item"><a class="nav-link active text-success fw-semibold" aria-current="page" href="cadastro.html">Cadastro</a></li>
+          <li class="nav-item">
+            <a class="nav-link active text-success fw-semibold" aria-current="page" href="cadastro.html">
+              Cadastro
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -30,67 +42,100 @@
   <main class="container py-5">
     <div class="tm-page-hero text-center text-md-start">
       <h1 class="h2 tm-section-title">Cadastro de trabalhador</h1>
-      <p class="text-muted mb-0">Preencha os dados essenciais. Campos marcados com * são obrigatórios.</p>
+      <p class="text-muted mb-0">
+        Preencha os dados essenciais. Campos marcados com * são obrigatórios.
+      </p>
     </div>
 
     <div class="tm-form-card">
-      <div class="card tm-card">
-        <div class="card-body p-4 p-md-5">
+      <div class="tm-card">
+        <div class="card-body">
           <div id="cadastro-feedback" class="alert d-none" role="alert"></div>
 
           <form id="form-cadastro" novalidate>
-            <div class="row g-3">
+            <div class="row g-4">
+
               <div class="col-12">
                 <label for="nome" class="form-label">Nome completo *</label>
-                <input type="text" class="form-control form-control-lg" id="nome" name="nome" required autocomplete="name" minlength="3" placeholder="Como deseja ser apresentado">
-              </div>
-              <div class="col-md-6">
-                <label for="cpf_cnpj" class="form-label">CPF ou CNPJ *</label>
-                <input type="text" class="form-control form-control-lg" id="cpf_cnpj" name="cpf_cnpj" required inputmode="numeric" placeholder="CPF (11) ou CNPJ (14 dígitos)">
-                <div class="form-text">Usamos para evitar cadastros duplicados.</div>
-              </div>
-              <div class="col-md-6">
-                <label for="contato" class="form-label">Telefone / WhatsApp *</label>
-                <input type="tel" class="form-control form-control-lg" id="contato" name="contato" required placeholder="DDD + número">
-              </div>
-              <div class="col-12">
-                <label for="descricao" class="form-label">Descrição dos serviços *</label>
-                <textarea class="form-control" id="descricao" name="descricao" rows="4" required minlength="20" placeholder="Conte o que você faz, experiência e região de atendimento"></textarea>
-              </div>
-              <div class="col-12">
-                <label for="curriculo" class="form-label">Link do currículo ou portfólio (opcional)</label>
-                <input type="url" class="form-control" id="curriculo" name="curriculo" placeholder="https://">
+                <input type="text" class="form-control form-control-lg" id="nome" name="nome"
+                  required autocomplete="name" minlength="3"
+                  placeholder="Como deseja ser apresentado">
               </div>
 
-              <div class="col-12"><hr class="my-2"></div>
-              <div class="col-12">
-                <p class="small text-muted mb-0">Endereço (opcional) — consulta automática pelo CEP via ViaCEP.</p>
+              <div class="col-md-6">
+                <label for="cpf_cnpj" class="form-label">CPF ou CNPJ *</label>
+                <input type="text" class="form-control form-control-lg" id="cpf_cnpj" name="cpf_cnpj"
+                  required inputmode="numeric"
+                  placeholder="CPF (11) ou CNPJ (14 dígitos)">
+                <div class="form-text">Usamos para evitar cadastros duplicados.</div>
               </div>
+
+              <div class="col-md-6">
+                <label for="contato" class="form-label">Telefone / WhatsApp *</label>
+                <input type="tel" class="form-control form-control-lg" id="contato" name="contato"
+                  required placeholder="DDD + número">
+              </div>
+
+              <div class="col-12">
+                <label for="descricao" class="form-label">Descrição dos serviços *</label>
+                <textarea class="form-control" id="descricao" name="descricao" rows="4"
+                  required minlength="20"
+                  placeholder="Conte o que você faz, experiência e região de atendimento"></textarea>
+              </div>
+
+              <div class="col-12">
+                <label for="curriculo" class="form-label">Link do currículo ou portfólio (opcional)</label>
+                <input type="url" class="form-control" id="curriculo" name="curriculo"
+                  placeholder="https://">
+              </div>
+
+              <div class="col-12">
+                <hr class="my-1">
+              </div>
+
+              <div class="col-12">
+                <p class="small text-muted mb-0">
+                  Endereço (opcional) — consulta automática pelo CEP via ViaCEP.
+                </p>
+              </div>
+
               <div class="col-md-4">
                 <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" name="cep" inputmode="numeric" maxlength="9" placeholder="00000-000">
+                <input type="text" class="form-control" id="cep" name="cep"
+                  inputmode="numeric" maxlength="9"
+                  placeholder="00000-000">
               </div>
+
               <div class="col-md-8">
                 <label for="logradouro" class="form-label">Logradouro</label>
                 <input type="text" class="form-control" id="logradouro" name="logradouro" readonly tabindex="-1">
               </div>
+
               <div class="col-md-5">
                 <label for="bairro" class="form-label">Bairro</label>
                 <input type="text" class="form-control" id="bairro" name="bairro" readonly tabindex="-1">
               </div>
+
               <div class="col-md-4">
                 <label for="cidade" class="form-label">Cidade</label>
                 <input type="text" class="form-control" id="cidade" name="cidade" readonly tabindex="-1">
               </div>
+
               <div class="col-md-3">
                 <label for="uf" class="form-label">UF</label>
                 <input type="text" class="form-control" id="uf" name="uf" readonly tabindex="-1">
               </div>
 
-              <div class="col-12 mt-4">
-                <button type="submit" class="btn btn-success btn-lg rounded-pill px-5">Enviar cadastro</button>
-                <a href="profissionais.html" class="btn btn-link">Cancelar</a>
+              <div class="col-12 mt-3 d-flex align-items-center gap-3 flex-wrap">
+                <button type="submit" class="btn btn-success btn-lg">
+                  Enviar cadastro
+                </button>
+
+                <a href="profissionais.html" class="btn btn-link text-muted">
+                  Cancelar
+                </a>
               </div>
+
             </div>
           </form>
         </div>
@@ -100,7 +145,7 @@
 
   <footer class="tm-footer mt-5">
     <div class="container text-center">
-      <span class="fw-semibold text-success">Trabalhemos</span> — conectando quem faz com quem precisa.
+      <span class="fw-bold text-success">Trabalhemos</span> — conectando quem faz com quem precisa.
     </div>
   </footer>
 
